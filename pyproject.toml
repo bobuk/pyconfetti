@@ -1,0 +1,37 @@
+[project]
+name = "pyconfetti"
+version = "0.1.0"
+description = "Pure Python parser for Confetti configuration language"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Unlicense" }
+authors = [{ name = "PyConfetti Team", email = "pyconfetti@example.com" }]
+keywords = ["configuration", "parser", "confetti", "config"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Installation/Setup",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pyconfetti"
+Documentation = "https://github.com/yourusername/pyconfetti#readme"
+Issues = "https://github.com/yourusername/pyconfetti/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+dev = ["mypy>=1.15.0", "rich>=14.0.0"]
+test = ["pytest>=7.0.0"]
+publish = ["build", "twine"]
+
+[tool.hatch.build]
+packages = ["pyconfetti"]
