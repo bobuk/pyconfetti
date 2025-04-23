@@ -144,7 +144,7 @@ def ensure_tests_available() -> str:
         console.print("[bold green]Successfully fetched test suite[/bold green]")
 
         # Ensure suite directory exists
-        suite_dir = os.path.join(tests_dir, "tests", "suite")
+        suite_dir = os.path.join(tests_dir, "tests", "conformance")
         if not os.path.exists(suite_dir):
             console.print("[bold red]Test suite directory structure is not as expected[/bold red]")
             console.print(f"[dim]Test files structure: {os.listdir(os.path.join(tests_dir))}[/dim]")
@@ -325,6 +325,7 @@ def run_test_suite(skip_extensions: bool = True, sample_only: bool = False, verb
                     "truncated_character.conf",
                     "truncated_overlong_character_sequence.conf",
                     "unassigned_character.conf",
+                    "quoted_argument_without_closing_quote.conf",
                     # Extension tests
                     "c_multi_line_comment_unterminated.conf",
                     "c_multi_line_comment_with_a_malformed_character.conf",
